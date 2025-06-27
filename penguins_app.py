@@ -25,3 +25,20 @@ st.plotly_chart(fig)
 #show scatterplot 
 fig_scatter = px.scatter(df, y='bill_length_mm', x='body_mass_g',color ='species')
 st.plotly_chart(fig_scatter)
+
+# Load the dataset from seaborn
+penguins = sns.load_dataset("penguins").dropna()
+
+# Create a violin plot
+fig = px.violin(
+    penguins,
+    x="species",
+    y="body_mass_g",
+    color="sex",           
+    box=True,             
+    points="all"  
+    
+)
+
+fig.update_layout(title="Penguin Body Mass by Species and Sex")
+st.plotly_chart(fig)
