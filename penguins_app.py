@@ -5,7 +5,7 @@ import plotly.express as px
 import seaborn as sns
 import random
 
-st.title('Penguins Rock 🐧')
+st.title('Tyler Ko:Penguins Rock 🐧')
 #load data
 df=sns.load_dataset('penguins')
 df=df.dropna()
